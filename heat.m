@@ -1,4 +1,7 @@
 clear; 
+
+%Variables defined/ Given
+
 c = .25;
 h = 0.1;  % Change in x
 k = 0.02; % Change in t
@@ -15,14 +18,14 @@ cfl = c*k/h^2; %stability condition
     U(:,end) = 0;
     U(:,1) = 0;
     
-    
+    % Loop
     for n = 2:row-1
         for i = 1:col-1
             U(i+1,n) = U(i,n) + cfl*(U(i+1,n) + U(i-1,n) - 2*U(i,n));
         end
     end
 
-    
+    % Plot the graph
 W = flipud(U);
 h = waitbar(0,'Please wait...');
 steps = row;
