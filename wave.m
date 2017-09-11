@@ -1,5 +1,7 @@
 clc;
 
+% Varibales Given
+
 xmin = 0;
 xmax = 1;
 N = 100;
