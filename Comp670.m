@@ -33,10 +33,10 @@ u(:,end) = 0;
 % Loop to calucate u(n+1,i) given three values u(i,n), 
 % u(n,i+1) and u(n,i-1) from previous row.
     
-for n = 1:row-1         % row = 100
-for i = 2:col-1         % col = 10
-    u(n+1,i) = u(n,i) + cfl*u(n,i+1) + cfl*u(n,i-1) - 2*cfl*u(n,i);
-end
+for n = 1:row-1            % row = 100
+    for i = 2:col-1         % col = 10
+        u(n+1,i) = u(n,i) + cfl*u(n,i+1) + cfl*u(n,i-1) - 2*cfl*u(n,i);
+    end
 end
     
 % Ploting the graph for every step using for loop.
