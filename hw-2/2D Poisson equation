@@ -21,12 +21,12 @@ y = linspace(0,Ly,Ny);  % y axis with Ny gird points
 
 h = .1;                 % space between two grid points
 
-%% Initalize Matrices
+% Initalize Matrices
 
 N = Nx * Ny;                % No of unknowns
 L = zeros(N,N) + eye(N);    % Get the L matrix by using eye function
 
-%% L matrix
+% Laplace matrix (L)
 
 % Using for loop to get L matrix. 
 % L matrix will be used to compute U(i,j) on interior grid points
@@ -42,19 +42,19 @@ for i=2:Nx-1
     end
 end
 
-%% z matrix to compute f matrix
+% z matrix to compute f matrix
 
 n = 10;              % n = number of grid points
 z = zeros(n,n);      % square matrix to compute f matrix
 
-%% Boundary Condition
+% Boundary Condition
 
 z(1,:) = 0;   % zero on 1st row
 z(n,:) = 0;   % zero on last row
 z(:,1) = 0;   % zero on 1st col
 z(:,n) = 0;   % zero on last col
 
-%% Calculate z matrix 
+% Calculate z matrix 
 
 % for loop from 2nd row and 2nd col till (h-1) row and 
 % column to compute z(i,j)
@@ -65,7 +65,7 @@ for i = 2:1:n-1             % row
     end
 end
 
-%% Calculate f matrix
+% Calculate f matrix
 
 % For loop to arrange all elements of z matrix in 
 % column vector format
@@ -78,13 +78,13 @@ for i = 1:1:n             % row
    end
 end
 
-%% U matrix (Numerical Solution)
+% U matrix (Numerical Solution)
 
 % Caculate "U" (Numerical solution) uisng "\"(backslash) operator.
 
 U = L\f;
 
-%% Numerical solution in matrix format
+% Numerical solution in matrix format
 
 % Convert U vector array in matrix format of size (Nx x Ny),
 % to plot the result
