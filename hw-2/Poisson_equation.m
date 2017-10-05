@@ -1,10 +1,10 @@
 
 %
- * File Name: 
- * Author: Pradeep Singh
- * Date: 9/27/2017
- * Language: Matlab
- * Description: % Numerical Solution for 2D Poisson Equation using matrix vector multiplication.
+% File Name: Poisson_equation.m
+% Author: Pradeep Singh
+% Date: 9/27/2017
+% Language: Matlab
+% Description: % Numerical Solution for 2D Poisson Equation using matrix vector multiplication.
 %
 
 clear; clc  % clear workspace
