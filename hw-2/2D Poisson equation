@@ -27,7 +27,6 @@ N = Nx * Ny;                % No of unknowns
 L = zeros(N,N) + eye(N);    % Get the L matrix by using eye function
 
 % Laplace matrix (L)
-
 % Using for loop to get L matrix. 
 % L matrix will be used to compute U(i,j) on interior grid points
 
@@ -55,7 +54,6 @@ z(:,1) = 0;   % zero on 1st col
 z(:,n) = 0;   % zero on last col
 
 % Calculate z matrix 
-
 % for loop from 2nd row and 2nd col till (h-1) row and 
 % column to compute z(i,j)
 
@@ -66,7 +64,6 @@ for i = 2:1:n-1             % row
 end
 
 % Calculate f matrix
-
 % For loop to arrange all elements of z matrix in 
 % column vector format
 
@@ -79,20 +76,17 @@ for i = 1:1:n             % row
 end
 
 % U matrix (Numerical Solution)
-
 % Caculate "U" (Numerical solution) uisng "\"(backslash) operator.
 
 U = L\f;
 
 % Numerical solution in matrix format
-
 % Convert U vector array in matrix format of size (Nx x Ny),
 % to plot the result
 
 B = reshape(U,[10,10]);
 
 % Plots
-
 % Plot surface image of the B matrix
 
 surf(x,y,B)
