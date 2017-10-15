@@ -1,4 +1,1 @@
-# Comp670-Assignment
-Assignments for Comp 670 (Problems in Computatioanl Science)
-
-Hello, This repo is all about assignments/ home work and projects I did/ worked on durting Comp 670.
+Numerical Solutions for PDE's. I'll keep adding different numerical schemes for different PDE's once in a while.
