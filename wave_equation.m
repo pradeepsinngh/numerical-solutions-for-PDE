@@ -1,6 +1,6 @@
 clc;
 
-% Varibales Given 
+% Varibales/ Input Given 
 
 xmin = 0;
 xmax = 1;
