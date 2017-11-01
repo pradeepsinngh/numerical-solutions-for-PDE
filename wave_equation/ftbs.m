@@ -7,7 +7,7 @@
 clc
 close all
 
-%% Initial Given values 
+% Initial Given values 
 
 % Domain values for x and t
 x_min = -1;   
@@ -27,7 +27,7 @@ n = 2;  % Calculate accuracy at this given point
 
 store = zeros(2, k);
 
-%% Calculating Numerical and Analytical Solution
+% Calculating Numerical and Analytical Solution
 
 % Loop k times
 for j=1:k
@@ -44,7 +44,7 @@ for j=1:k
     dx = (x_max - x_min)/(x_grid-1); %step size in space
     dt = (t_max - t_min)/(t_grid-1); %step size in time
 
- %% Initial Condition
+ % Initial Condition
     
     % Initial Condition
     % u(x,0) = u0(x) = sin(2*pi*x)
@@ -55,7 +55,7 @@ for j=1:k
     % CFL condition
     CFL = c*dt/dx; % c =1 (given)
  
- %% FTBS Scheme
+ % FTBS Scheme
  
     % FTBS coefficient Matrix
     U = (1-CFL)*eye(x_grid) + CFL*diag(ones(x_grid-1, 1), -1);
@@ -76,7 +76,7 @@ for j=1:k
         U_old = U_new;
     end
 
- %% Analytical Solution
+ % Analytical Solution
  
     % Cal the Analytic Sol at t =1.2
     analytical = zeros(1, x_grid);
@@ -95,7 +95,7 @@ for j=1:k
 
 end
 
-%% Accuracy Test
+% Accuracy Test
 
 % Computing the order accuracy
 accuracy = zeros(1, k-1);
@@ -103,7 +103,7 @@ for i=1:(k-1)
     accuracy(i) = log2(abs(((store(1,i)-store(2,i)))/(store(1, i+1)-store(2, i+1))));
 end
 
-%% Plot
+% Plot
 
 % Plot the Analytical and FTCS solution
 x = x_min:dx:x_max;  %grid values on x-axis
