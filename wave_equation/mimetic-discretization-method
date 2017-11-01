@@ -78,7 +78,3 @@ xlabel('x')
 ylabel('u(x)')
 legend('MDM','Analytical', 'Location', 'Southeast'); 
 
-%% Discussion
-
-% With Mimetic Discretization Methods, we get second order of accuracy.
-    
