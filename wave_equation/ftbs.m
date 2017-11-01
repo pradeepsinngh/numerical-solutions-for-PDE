@@ -121,7 +121,7 @@ ylabel('u(x)')
 legend('FTCS','Analytical', 'Location', 'Southeast'); 
 
 
-%% Discussion
+% Discussion
 
 % As we increas k, our grid size decrease and we get much finer and accurate plots.
 % Also, with increase in k, we get accuracy close to 1.
