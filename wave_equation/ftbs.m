@@ -1,6 +1,6 @@
-%% 1D One Way Wave Equation
+% 1D One Way Wave Equation
 
-% Solving 1D One Way Wave Equation using FTCS Scheme
+% Solving 1D One Way Wave Equation using FTBS Scheme
 % Author: Pradeep Singh
 % Date: 10/30/2017
 
