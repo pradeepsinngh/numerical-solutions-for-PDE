@@ -1,4 +1,4 @@
-%% 1D One Way Wave Equation
+% 1D One Way Wave Equation
 
 % Solving 1D One Way Wave Equation using Leap Frog Scheme
 % Author: Pradeep Singh
@@ -7,7 +7,7 @@
 clc
 close all
 
-%% Initial Given values 
+% Initial Given values 
 
 % Domain values for x and t
 x_min = -1;   
@@ -27,7 +27,7 @@ n = 2;  % Calculate accuracy at this given point
 
 store = zeros(2, k);
 
-%% Calculating Numerical and Analytical Solution
+% Calculating Numerical and Analytical Solution
 
 % Loop k times
 for j=1:k
@@ -44,7 +44,7 @@ for j=1:k
     dx = (x_max-x_min)/(x_grid-1);
     dt = (t_max-t_min)/(t_grid-1);
     
- %% Initial Condition
+  % Initial Condition
 
     % Initial Condition
     % u(x,0) = u0(x) = sin(2*pi*x)
@@ -61,7 +61,7 @@ for j=1:k
        Initial_cond(i+1, 1) = f(i*dx+x_min); 
     end
     
-%% FTCS Scheme
+% FTCS Scheme
     
     % FTBS coefficient Matrix
     % Multiply by 1/2 to convert into FTCS
@@ -78,7 +78,7 @@ for j=1:k
     % For second time step, use FTCS scheme
     U_new = U*U_old; %timestep 2
 
-%% Leap Frog Scheme    
+% Leap Frog Scheme    
 
     % Calculating Leapfrog matrix
     P = zeros(x_grid, x_grid);
@@ -97,7 +97,7 @@ for j=1:k
         U_new = U_next;
     end
 
-%% Analytical Solution
+% Analytical Solution
 
     % Cal the Analytic Sol at t =1.2
     Analytical = zeros(1, x_grid);
@@ -115,7 +115,7 @@ for j=1:k
     store(2, j) = U_new(n+(i-1), 1);
 end
 
-%% Accuracy Test
+% Accuracy Test
 
 % Computing the order of accuracy
 accuracy = zeros(1, k-1);
@@ -123,7 +123,7 @@ for i=1:(k-1)
    accuracy(i) = log2(abs(((store(1,i)-store(2,i)))/(store(1, i+1)-store(2, i+1))));
 end
 
-%% Plot
+% Plot
 
 % Plot the analytical and numerical solution
 x = linspace(x_max, x_min, x_grid);
