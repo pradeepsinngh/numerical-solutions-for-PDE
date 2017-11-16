@@ -12,7 +12,7 @@ clear; clc  % clear workspace
 
 addpath('../Matlab/mole-master/mole_MATLAB') % path of mole library
 
-% Inputs
+% Inputs 
 
 m = 10;  % grid points
 n = 10;  % grid points
