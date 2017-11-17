@@ -4,6 +4,7 @@
 % 
 
 clc;
+clear;
 
 % Varibales/ Input Given 
 
