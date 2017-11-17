@@ -3,7 +3,6 @@
 % Email: psingh2@sdsu.edu
 % 
 
-
 clc;
 
 % Varibales/ Input Given 
