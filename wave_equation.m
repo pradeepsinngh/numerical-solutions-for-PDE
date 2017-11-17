@@ -24,7 +24,7 @@ uO = exp(-200 * (x-0.25).^2);
 u = uO;
 unp1 = uO;
 
-%loop
+%loops
 nsteps  = tmax/k;
 
 for n = 1: nsteps
