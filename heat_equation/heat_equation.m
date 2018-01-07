@@ -5,7 +5,7 @@
 % Language: Matlab
 % Description: % Numerical Solution for 1D Poisson Equation
 %
-
+ 
 % Initializing given variables/ data
 % stability constant (c), dt = timesteps (k), 
 % dx = space steps (h),
