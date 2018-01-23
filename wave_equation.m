@@ -36,7 +36,7 @@ for n = 1: nsteps
     %Cal the unp1
     for i = 2 : N+2
         unp1(i) = u(1) - c*k/h^2 * (u(i) - u(i-1));
-    end
+    end 
     
     %update t & u
     t = t + k;
