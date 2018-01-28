@@ -95,7 +95,7 @@ for j=1:k
 
 end
 
-% Accuracy Test
+% Accuracy Test 
 
 % Computing the order accuracy
 accuracy = zeros(1, k-1);
