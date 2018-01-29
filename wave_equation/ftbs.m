@@ -28,7 +28,6 @@ n = 2;  % Calculate accuracy at this given point
 store = zeros(2, k);
 
 % Calculating Numerical and Analytical Solution
-
 % Loop k times
 for j=1:k
     
