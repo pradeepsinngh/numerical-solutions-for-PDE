@@ -3,7 +3,7 @@
 % Solving 1D One Way Wave Equation using Leap Frog Scheme
 % Author: Pradeep Singh
 % Date: 10/30/2017
-
+ 
 clc
 close all
 
