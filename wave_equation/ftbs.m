@@ -126,4 +126,3 @@ legend('FTCS','Analytical', 'Location', 'Southeast');
 % Also, with increase in k, we get accuracy close to 1.
 
 % Eg: With k = 10, our order of accuracy is .99, which is very close to 1.
-    
