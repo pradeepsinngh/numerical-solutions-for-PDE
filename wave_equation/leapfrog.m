@@ -14,7 +14,7 @@ x_min = -1;
 x_max = 1;    
 t_min = 0; 
 t_max = 1.2;
-c = 1;      % c = 1 (given value)
+c = 1;        % c = 1 (given value)
 
 k =10;  % Number of times we double our grid size 
         % for accuracy test.
@@ -44,7 +44,7 @@ for j=1:k
     dx = (x_max-x_min)/(x_grid-1);
     dt = (t_max-t_min)/(t_grid-1);
     
-  % Initial Condition
+    % Initial Condition
 
     % Initial Condition
     % u(x,0) = u0(x) = sin(2*pi*x)
